@@ -1,0 +1,833 @@
+{
+	"info": {
+		"_postman_id": "23e47b94-3448-4244-bf9f-934eb528287c",
+		"name": "APIM",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "APIM Managment",
+			"item": [
+				{
+					"name": "APIs - Get",
+					"id": "c63e6ce7-9f0a-4f40-a805-75eeed0b4652",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "",
+								"value": "",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://management.azure.com/subscriptions/{{subscriptionId}}/resourceGroups/{{resourceGroupName}}/providers/Microsoft.ApiManagement/service/{{apimName}}/apis?api-version=2023-05-01-preview",
+							"protocol": "https",
+							"host": [
+								"management",
+								"azure",
+								"com"
+							],
+							"path": [
+								"subscriptions",
+								"{{subscriptionId}}",
+								"resourceGroups",
+								"{{resourceGroupName}}",
+								"providers",
+								"Microsoft.ApiManagement",
+								"service",
+								"{{apimName}}",
+								"apis"
+							],
+							"query": [
+								{
+									"key": "api-version",
+									"value": "2023-05-01-preview"
+								}
+							]
+						},
+						"description": "List VMs in a resource group"
+					},
+					"response": []
+				},
+				{
+					"name": "API - Get",
+					"id": "5de52ade-7631-4388-b984-8b8ff10a8e0b",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "",
+								"value": "",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://management.azure.com/subscriptions/{{subscriptionId}}/resourceGroups/{{resourceGroupName}}/providers/Microsoft.ApiManagement/service/{{apimName}}/apis/token?api-version=2023-05-01-preview",
+							"protocol": "https",
+							"host": [
+								"management",
+								"azure",
+								"com"
+							],
+							"path": [
+								"subscriptions",
+								"{{subscriptionId}}",
+								"resourceGroups",
+								"{{resourceGroupName}}",
+								"providers",
+								"Microsoft.ApiManagement",
+								"service",
+								"{{apimName}}",
+								"apis",
+								"token"
+							],
+							"query": [
+								{
+									"key": "api-version",
+									"value": "2023-05-01-preview"
+								}
+							]
+						},
+						"description": "List VMs in a resource group"
+					},
+					"response": []
+				},
+				{
+					"name": "API - Delete",
+					"id": "c1bf5cf0-b83a-4056-8c3a-1696374638ff",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://management.azure.com/subscriptions/{{subscriptionId}}/resourceGroups/{{resourceGroupName}}/providers/Microsoft.ApiManagement/service/{{apimName}}/apis/token?api-version=2023-05-01-preview",
+							"protocol": "https",
+							"host": [
+								"management",
+								"azure",
+								"com"
+							],
+							"path": [
+								"subscriptions",
+								"{{subscriptionId}}",
+								"resourceGroups",
+								"{{resourceGroupName}}",
+								"providers",
+								"Microsoft.ApiManagement",
+								"service",
+								"{{apimName}}",
+								"apis",
+								"token"
+							],
+							"query": [
+								{
+									"key": "api-version",
+									"value": "2023-05-01-preview"
+								}
+							]
+						},
+						"description": "List VMs in a resource group"
+					},
+					"response": []
+				},
+				{
+					"name": "API - Create Or Update",
+					"id": "7a9a4de2-3b53-4605-8058-eab9f04eb090",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "",
+								"value": "",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"properties\": {\r\n        \"displayName\": \"Token API\",\r\n        \"apiRevision\": \"1\",\r\n        \"description\": null,\r\n        \"subscriptionRequired\": false,\r\n        \"serviceUrl\": \"https://login.microsoftonline.com/{{tenantId}}/oauth2/v2.0/token\",\r\n        \"backendId\": null,\r\n        \"path\": \"token\",\r\n        \"protocols\": [\r\n            \"https\"\r\n        ],\r\n        \"authenticationSettings\": {\r\n            \"oAuth2\": null,\r\n            \"openid\": null,\r\n            \"oAuth2AuthenticationSettings\": [],\r\n            \"openidAuthenticationSettings\": []\r\n        },\r\n        \"subscriptionKeyParameterNames\": {\r\n            \"header\": \"Ocp-Apim-Subscription-Key\",\r\n            \"query\": \"subscription-key\"\r\n        },\r\n        \"isCurrent\": true\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://management.azure.com/subscriptions/{{subscriptionId}}/resourceGroups/{{resourceGroupName}}/providers/Microsoft.ApiManagement/service/{{apimName}}/apis/token?api-version=2023-05-01-preview",
+							"protocol": "https",
+							"host": [
+								"management",
+								"azure",
+								"com"
+							],
+							"path": [
+								"subscriptions",
+								"{{subscriptionId}}",
+								"resourceGroups",
+								"{{resourceGroupName}}",
+								"providers",
+								"Microsoft.ApiManagement",
+								"service",
+								"{{apimName}}",
+								"apis",
+								"token"
+							],
+							"query": [
+								{
+									"key": "api-version",
+									"value": "2023-05-01-preview"
+								}
+							]
+						},
+						"description": "List VMs in a resource group"
+					},
+					"response": []
+				},
+				{
+					"name": "API Operation - List By API",
+					"id": "43529205-9f8d-4277-87f1-11bccb933fb8",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "",
+								"value": "",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://management.azure.com/subscriptions/{{subscriptionId}}/resourceGroups/{{resourceGroupName}}/providers/Microsoft.ApiManagement/service/{{apimName}}/apis/echo-api/operations?api-version=2023-05-01-preview",
+							"protocol": "https",
+							"host": [
+								"management",
+								"azure",
+								"com"
+							],
+							"path": [
+								"subscriptions",
+								"{{subscriptionId}}",
+								"resourceGroups",
+								"{{resourceGroupName}}",
+								"providers",
+								"Microsoft.ApiManagement",
+								"service",
+								"{{apimName}}",
+								"apis",
+								"echo-api",
+								"operations"
+							],
+							"query": [
+								{
+									"key": "api-version",
+									"value": "2023-05-01-preview"
+								}
+							]
+						},
+						"description": "List VMs in a resource group"
+					},
+					"response": []
+				},
+				{
+					"name": "API Operation - Create Or Update",
+					"id": "f805adfc-3b6e-4084-a30c-3bbe537e7ffa",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"properties\": {\r\n    \"displayName\": \"Acquire Entra Token\",\r\n    \"method\": \"POST\",\r\n    \"urlTemplate\": \"/\",\r\n    \"templateParameters\": [],\r\n    \"description\": \"Acquire a new Entra token\",\r\n    \"request\": {\r\n      \"description\": \"Acquire a new JWT\",\r\n      \"queryParameters\": [],\r\n      \"headers\": [],\r\n      \"representations\": []\r\n    },\r\n    \"responses\": [\r\n      {\r\n        \"statusCode\": 200,\r\n        \"description\": \"successful operation\",\r\n        \"representations\": [\r\n          {\r\n            \"contentType\": \"application/xml\"\r\n          },\r\n          {\r\n            \"contentType\": \"application/json\"\r\n          }\r\n        ],\r\n        \"headers\": []\r\n      }\r\n    ]\r\n  }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://management.azure.com/subscriptions/{{subscriptionId}}/resourceGroups/{{resourceGroupName}}/providers/Microsoft.ApiManagement/service/{{apimName}}/apis/token/operations/token?api-version=2023-05-01-preview",
+							"protocol": "https",
+							"host": [
+								"management",
+								"azure",
+								"com"
+							],
+							"path": [
+								"subscriptions",
+								"{{subscriptionId}}",
+								"resourceGroups",
+								"{{resourceGroupName}}",
+								"providers",
+								"Microsoft.ApiManagement",
+								"service",
+								"{{apimName}}",
+								"apis",
+								"token",
+								"operations",
+								"token"
+							],
+							"query": [
+								{
+									"key": "api-version",
+									"value": "2023-05-01-preview"
+								}
+							]
+						},
+						"description": "List VMs in a resource group"
+					},
+					"response": []
+				},
+				{
+					"name": "API Policy - List By API",
+					"id": "1f9ac065-85ad-45b9-a9df-b4f393c9d17b",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "",
+								"value": "",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://management.azure.com/subscriptions/{{subscriptionId}}/resourceGroups/{{resourceGroupName}}/providers/Microsoft.ApiManagement/service/{{apimName}}/apis/token/policies?api-version=2023-05-01-preview",
+							"protocol": "https",
+							"host": [
+								"management",
+								"azure",
+								"com"
+							],
+							"path": [
+								"subscriptions",
+								"{{subscriptionId}}",
+								"resourceGroups",
+								"{{resourceGroupName}}",
+								"providers",
+								"Microsoft.ApiManagement",
+								"service",
+								"{{apimName}}",
+								"apis",
+								"token",
+								"policies"
+							],
+							"query": [
+								{
+									"key": "api-version",
+									"value": "2023-05-01-preview"
+								}
+							]
+						},
+						"description": "List VMs in a resource group"
+					},
+					"response": []
+				},
+				{
+					"name": "API Policy - Create CORS",
+					"id": "225e90a4-26a5-4f00-ad01-f1fdcf53fc83",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"properties\": {\r\n    \"format\": \"xml\",\r\n    \"value\": \"<policies>\r\n    <!-- Throttle, authorize, validate, cache, or transform the requests -->\r\n    <inbound>\r\n        <base />\r\n        <cors allow-credentials=\\\"false\\\">\r\n            <allowed-origins>\r\n                <origin>https://login.microsoftonline.com</origin>\r\n            </allowed-origins>\r\n            <allowed-methods>\r\n                <method>GET</method>\r\n                <method>POST</method>\r\n            </allowed-methods>\r\n        </cors>\r\n    </inbound>\r\n    <!-- Control if and how the requests are forwarded to services  -->\r\n    <backend>\r\n        <base />\r\n    </backend>\r\n    <!-- Customize the responses -->\r\n    <outbound>\r\n        <base />\r\n    </outbound>\r\n    <!-- Handle exceptions and customize error responses  -->\r\n    <on-error>\r\n        <base />\r\n    </on-error>\r\n</policies>\"\r\n  }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://management.azure.com/subscriptions/{{subscriptionId}}/resourceGroups/{{resourceGroupName}}/providers/Microsoft.ApiManagement/service/{{apimName}}/apis/token/policies/policy?api-version=2023-03-01-preview",
+							"protocol": "https",
+							"host": [
+								"management",
+								"azure",
+								"com"
+							],
+							"path": [
+								"subscriptions",
+								"{{subscriptionId}}",
+								"resourceGroups",
+								"{{resourceGroupName}}",
+								"providers",
+								"Microsoft.ApiManagement",
+								"service",
+								"{{apimName}}",
+								"apis",
+								"token",
+								"policies",
+								"policy"
+							],
+							"query": [
+								{
+									"key": "api-version",
+									"value": "2023-03-01-preview"
+								}
+							]
+						},
+						"description": "List VMs in a resource group"
+					},
+					"response": []
+				},
+				{
+					"name": "Product - List By Service",
+					"id": "c1009ffa-48f7-4c3d-9927-95ac3fb45d06",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "",
+								"value": "",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://management.azure.com/subscriptions/{{subscriptionId}}/resourceGroups/{{resourceGroupName}}/providers/Microsoft.ApiManagement/service/{{apimName}}/products?api-version=2023-05-01-preview",
+							"protocol": "https",
+							"host": [
+								"management",
+								"azure",
+								"com"
+							],
+							"path": [
+								"subscriptions",
+								"{{subscriptionId}}",
+								"resourceGroups",
+								"{{resourceGroupName}}",
+								"providers",
+								"Microsoft.ApiManagement",
+								"service",
+								"{{apimName}}",
+								"products"
+							],
+							"query": [
+								{
+									"key": "api-version",
+									"value": "2023-05-01-preview"
+								}
+							]
+						},
+						"description": "List VMs in a resource group"
+					},
+					"response": []
+				},
+				{
+					"name": "Product APIs - List By Product",
+					"id": "8a65e6a4-1cdb-45d3-82f7-82f0aeaac0ce",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "",
+								"value": "",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://management.azure.com/subscriptions/{{subscriptionId}}/resourceGroups/{{resourceGroupName}}/providers/Microsoft.ApiManagement/service/{{apimName}}/products/unlimited/apis?api-version=2023-05-01-preview",
+							"protocol": "https",
+							"host": [
+								"management",
+								"azure",
+								"com"
+							],
+							"path": [
+								"subscriptions",
+								"{{subscriptionId}}",
+								"resourceGroups",
+								"{{resourceGroupName}}",
+								"providers",
+								"Microsoft.ApiManagement",
+								"service",
+								"{{apimName}}",
+								"products",
+								"unlimited",
+								"apis"
+							],
+							"query": [
+								{
+									"key": "api-version",
+									"value": "2023-05-01-preview"
+								}
+							]
+						},
+						"description": "List VMs in a resource group"
+					},
+					"response": []
+				},
+				{
+					"name": "Product - Add API to product",
+					"id": "537e6281-6ea5-45cc-aea3-7f70c93cd3a6",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "",
+								"value": "",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"properties\": {\r\n        \"displayName\": \"Token API\",\r\n        \"apiRevision\": \"1\",\r\n        \"description\": null,\r\n        \"subscriptionRequired\": false,\r\n        \"serviceUrl\": \"https://login.microsoftonline.com/{{tenantId}}/oauth2/v2.0/token\",\r\n        \"backendId\": null,\r\n        \"path\": \"token\",\r\n        \"protocols\": [\r\n            \"https\"\r\n        ],\r\n        \"authenticationSettings\": {\r\n            \"oAuth2\": null,\r\n            \"openid\": null,\r\n            \"oAuth2AuthenticationSettings\": [],\r\n            \"openidAuthenticationSettings\": []\r\n        },\r\n        \"subscriptionKeyParameterNames\": {\r\n            \"header\": \"Ocp-Apim-Subscription-Key\",\r\n            \"query\": \"subscription-key\"\r\n        },\r\n        \"isCurrent\": true\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://management.azure.com/subscriptions/{{subscriptionId}}/resourceGroups/{{resourceGroupName}}/providers/Microsoft.ApiManagement/service/{{apimName}}/products/unlimited/apis/token?api-version=2023-05-01-preview",
+							"protocol": "https",
+							"host": [
+								"management",
+								"azure",
+								"com"
+							],
+							"path": [
+								"subscriptions",
+								"{{subscriptionId}}",
+								"resourceGroups",
+								"{{resourceGroupName}}",
+								"providers",
+								"Microsoft.ApiManagement",
+								"service",
+								"{{apimName}}",
+								"products",
+								"unlimited",
+								"apis",
+								"token"
+							],
+							"query": [
+								{
+									"key": "api-version",
+									"value": "2023-05-01-preview"
+								}
+							]
+						},
+						"description": "List VMs in a resource group"
+					},
+					"response": []
+				},
+				{
+					"name": "Gateway - Create Debug Credentials",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "3accf35e-c87e-4c64-898b-e6a893c10272",
+								"exec": [
+									"// Fixed the test script to resolve the TypeError\r",
+									"pm.test(\"First request\", function() {\r",
+									"    let bodyValue = pm.response.json().token;\r",
+									"    pm.environment.set(\"apim_trace_token\", bodyValue);\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"id": "c9824d40-c803-4b27-ae39-f953ba2c4b04",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"credentialsExpireAfter\": \"PT1H\",\r\n    \"apiId\": \"/subscriptions/ec57f00d-7b40-46e7-b40e-c5469f194c00/resourceGroups/apps/providers/Microsoft.ApiManagement/service/apim038/apis/token\",\r\n    \"purposes\": [\"tracing\"]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://management.azure.com/subscriptions/{{subscriptionId}}/resourceGroups/{{resourceGroupName}}/providers/Microsoft.ApiManagement/service/{{apimName}}/gateways/managed/listDebugCredentials?api-version=2023-05-01-preview",
+							"protocol": "https",
+							"host": [
+								"management",
+								"azure",
+								"com"
+							],
+							"path": [
+								"subscriptions",
+								"{{subscriptionId}}",
+								"resourceGroups",
+								"{{resourceGroupName}}",
+								"providers",
+								"Microsoft.ApiManagement",
+								"service",
+								"{{apimName}}",
+								"gateways",
+								"managed",
+								"listDebugCredentials"
+							],
+							"query": [
+								{
+									"key": "api-version",
+									"value": "2023-05-01-preview"
+								}
+							]
+						},
+						"description": "List VMs in a resource group"
+					},
+					"response": []
+				},
+				{
+					"name": "Gateway - List Trace",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "3accf35e-c87e-4c64-898b-e6a893c10272",
+								"exec": [
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"id": "bb7ef3b0-e38a-44ce-8be8-e5029c1f475e",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"traceId\": \"{{apim_trace_id}}\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://management.azure.com/subscriptions/{{subscriptionId}}/resourceGroups/{{resourceGroupName}}/providers/Microsoft.ApiManagement/service/{{apimName}}/gateways/managed/listTrace?api-version=2023-05-01-preview",
+							"protocol": "https",
+							"host": [
+								"management",
+								"azure",
+								"com"
+							],
+							"path": [
+								"subscriptions",
+								"{{subscriptionId}}",
+								"resourceGroups",
+								"{{resourceGroupName}}",
+								"providers",
+								"Microsoft.ApiManagement",
+								"service",
+								"{{apimName}}",
+								"gateways",
+								"managed",
+								"listTrace"
+							],
+							"query": [
+								{
+									"key": "api-version",
+									"value": "2023-05-01-preview"
+								}
+							]
+						},
+						"description": "List VMs in a resource group"
+					},
+					"response": []
+				}
+			],
+			"id": "0db2c1e6-3729-434d-bb28-2593514f5670",
+			"auth": {
+				"type": "oauth2",
+				"oauth2": {
+					"addTokenTo": "header"
+				}
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "2bf38cdc-c11e-4663-bd5b-77c7cb7206e5",
+						"type": "text/javascript",
+						"packages": {},
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "c44cb237-a14b-4d01-8619-907bd816842b",
+						"type": "text/javascript",
+						"packages": {},
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "Get JWT",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "0c1c508a-0436-42ca-8307-ca8e747cc76f",
+						"exec": [
+							"pm.test(\"First request\", function() {\r",
+							"    let headerValue = pm.response.headers.get(\"Apim-Trace-Id\");\r",
+							"    pm.environment.set(\"apim_trace_id\", headerValue);\r",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"id": "5f73859d-f648-4afe-bcc4-e5c09bd891dc",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Ocp-Apim-Subscription-Key",
+						"value": "{{Ocp-Apim-Subscription-Key}}",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "Apim-Debug-Authorization",
+						"value": "{{apim_trace_token}}",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "client_id",
+							"value": "{{clientId}}",
+							"type": "text"
+						},
+						{
+							"key": "client_secret",
+							"value": "{{clientSecret}}",
+							"type": "text"
+						},
+						{
+							"key": "tenant_id",
+							"value": "{{tenantId}}",
+							"type": "text"
+						},
+						{
+							"key": "grant_type",
+							"value": "{{grant_type}}",
+							"type": "text"
+						},
+						{
+							"key": "scope",
+							"value": "{{scope_management}}",
+							"type": "text"
+						}
+					]
+				},
+				"url": "https://apim038.azure-api.net/token"
+			},
+			"response": []
+		}
+	]
+}
